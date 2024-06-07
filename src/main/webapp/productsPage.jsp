@@ -38,7 +38,7 @@
 	%>
 	 
 	<tr bgcolor="white">
-	<td><%=productos.get(i).getId() %></td>
+	<td><%=productos.get(i).getIdProducto() %></td>
 	<td><%=productos.get(i).getNombre()%></td>
 	<td><%=productos.get(i).getFoto()%></td>
 	<td><%=productos.get(i).getDescripcion()%></td>
@@ -46,7 +46,7 @@
 	<td><%=productos.get(i).getTamaño()%></td>
 	<td><%=productos.get(i).getStock()%></td>
 	<td> 
-		<a class="btn btn-primary"  href="<%=request.getContextPath()%>/ProductsController?id=<%=productos.get(i).getId()%>" > comprar </a>
+		<a class="btn btn-primary"  href="<%=request.getContextPath()%>/carrito?accion=agregar$id<%=productos.get(i).getIdProducto()%>" > comprar </a>
 	 	<button class="btn btn-danger"> eliminar </button>
 	 </td>
 <%		

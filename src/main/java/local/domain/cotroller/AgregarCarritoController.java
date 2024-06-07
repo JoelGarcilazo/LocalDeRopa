@@ -9,6 +9,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import local.domain.service.CarritoService;
+import local.domain.service.CarritoServiceImpl;
+
 
 @WebServlet( urlPatterns =  "/carrito")
 public class AgregarCarritoController extends HttpServlet {
@@ -18,19 +21,37 @@ public class AgregarCarritoController extends HttpServlet {
 	 */
 	private static final long serialVersionUID = 1L;
 
+	private CarritoService carritoService = new CarritoServiceImpl();
 	
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
 	RequestDispatcher ds = this.getServletContext().getRequestDispatcher("/carrito.jsp");
-		
+	
+	switch (req.getParameter("accion")) {
+	case "agregar":
 		try {
-			req.setAttribute("productos", productsService.listarPro());
+			req.setAttribute("carrito", carritoService.listarCarrito() );
 			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+		
+		
+		break;
+
+	default:
+		break;
+	}
+	
+		
+		/*try {
+			req.setAttribute("carrito", carritoService.listarCarrito() );
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}*/
 		
 		ds.forward(req, resp);
 		

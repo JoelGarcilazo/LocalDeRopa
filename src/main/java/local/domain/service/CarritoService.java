@@ -7,7 +7,7 @@ public interface CarritoService {
 	
 	public List<Carrito> listarCarrito() throws Exception;
 	
-	public Carrito agregarProducto() throws Exception;
+	public void agregarProducto() throws Exception;
 	
 
 }

@@ -14,14 +14,14 @@ public class AbstractProductDaoImpl extends AbstractProductDao<Productos> {
 
 
 	@Override
-	public Productos getPojo(ResultSet rs) throws Exception {
+	protected Productos getPojo(ResultSet rs) throws Exception {
 		Productos productos = new Productos();
 		productos.setIdProducto(rs.getInt(1));
 		productos.setNombre(rs.getString(2));
 		productos.setFoto(rs.getBinaryStream(3));
 		productos.setDescripcion(rs.getString(4));
 		productos.setPrecio(rs.getInt(5));
-		productos.setTamaÃ±o(rs.getString(6));
+		productos.setTamaño(rs.getString(6));
 		productos.setStock(rs.getInt(7));
 		return productos;
 	}

@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import local.domain.service.CarritoService;
+import local.domain.service.CarritoServiceImpl;
 import local.domain.service.ProductsService;
 import local.domain.service.ProductsServiceImp;
 
@@ -19,6 +21,7 @@ public class ProductsController extends HttpServlet{
 	
 	private static final long serialVersionUID = 1L;
 	private ProductsService productsService = new ProductsServiceImp();
+	private CarritoService carritoService = new CarritoServiceImpl();
 	
 
 	@Override
@@ -29,6 +32,12 @@ public class ProductsController extends HttpServlet{
 		try {
 			req.setAttribute("productos", productsService.listarProductos());
 			
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		try {
+			carritoService.agregarProducto();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

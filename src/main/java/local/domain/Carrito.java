@@ -10,7 +10,7 @@ public class Carrito {
 	private InputStream foto;
 	private String descripcion;
 	private int precio;
-	private String tamaÃ±o;
+	private String tamaño;
 	
 	
 	
@@ -19,7 +19,7 @@ public class Carrito {
 	}
 	
 	public Carrito(int idCarrito, int idProducto, String nombre, InputStream foto, String descripcion, int precio,
-			String tamaÃ±o) {
+			String tamaño) {
 		super();
 		this.idCarrito = idCarrito;
 		this.idProducto = idProducto;
@@ -27,7 +27,7 @@ public class Carrito {
 		this.foto = foto;
 		this.descripcion = descripcion;
 		this.precio = precio;
-		this.tamaÃ±o = tamaÃ±o;
+		this.tamaño = tamaño;
 	}
 	
 	public int getIdCarrito() {
@@ -66,11 +66,11 @@ public class Carrito {
 	public void setPrecio(int precio) {
 		this.precio = precio;
 	}
-	public String getTamaÃ±o() {
-		return tamaÃ±o;
+	public String getTamaño() {
+		return tamaño;
 	}
-	public void setTamaÃ±o(String tamaÃ±o) {
-		this.tamaÃ±o = tamaÃ±o;
+	public void setTamaño(String tamaño) {
+		this.tamaño = tamaño;
 	}
 	
 	
