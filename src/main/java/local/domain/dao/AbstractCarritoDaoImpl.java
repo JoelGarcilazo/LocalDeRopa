@@ -10,7 +10,7 @@ public class AbstractCarritoDaoImpl extends AbstractCarritoDao<Carrito> {
 
 	@Override
 	protected String getQueryAgregar() {
-		return "INSERT INTO carrito (idProducto, nombre, foto, descripcion, precio, tamaño) SELECT idProducto, nombre, foto, descripcion, precio, tamaño FROM productos WHERE idProducto = ?";
+		return "INSERT INTO carrito (idProducto, nombre, foto, descripcion, precio, tamaÃ±o) SELECT idProducto, nombre, foto, descripcion, precio, tamaÃ±o FROM productos WHERE idProducto = ?";
 	}
 
 	@Override
@@ -26,7 +26,7 @@ public class AbstractCarritoDaoImpl extends AbstractCarritoDao<Carrito> {
 		carrito.setFoto(rs.getBinaryStream(3));
 		carrito.setDescripcion(rs.getString(3));
 		carrito.setPrecio(rs.getInt(4));
-		carrito.setTamaño(rs.getString(5));
+		carrito.setTamaÃ±o(rs.getString(5));
 		
 		return carrito;
 	}

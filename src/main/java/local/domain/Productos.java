@@ -2,8 +2,6 @@ package local.domain;
 
 import java.io.InputStream;
 
-import local.domain.enums.TypeCategory;
-import local.domain.enums.TypeClothe;
 
 public class Productos {
 	
@@ -12,27 +10,25 @@ public class Productos {
 	private InputStream foto;
 	private String descripcion;
 	private int precio;
-	private String tamaño;
+	private String tamaÃ±o;
 	private int stock;
-	private TypeCategory typeCategory;
-	private TypeClothe typeClothe;
+
 	
 	public Productos(){
 		
 	}
 
-	public Productos(int idProducto, String nombre, InputStream foto, String descripcion, int precio, String tamaño,
-			int stock, TypeCategory typeCategory, TypeClothe typeClothe) {
+	public Productos(int idProducto, String nombre, InputStream foto, String descripcion, int precio, String tamaÃ±o,
+			int stock) {
 		super();
 		this.idProducto = idProducto;
 		this.nombre = nombre;
 		this.foto = foto;
 		this.descripcion = descripcion;
 		this.precio = precio;
-		this.tamaño = tamaño;
+		this.tamaÃ±o = tamaÃ±o;
 		this.stock = stock;
-		this.typeCategory = typeCategory;
-		this.typeClothe = typeClothe;
+
 	}
 
 	public int getIdProducto() {
@@ -75,12 +71,12 @@ public class Productos {
 		this.precio = precio;
 	}
 
-	public String getTamaño() {
-		return tamaño;
+	public String getTamaÃ±o() {
+		return tamaÃ±o;
 	}
 
-	public void setTamaño(String tamaño) {
-		this.tamaño = tamaño;
+	public void setTamaÃ±o(String tamaÃ±o) {
+		this.tamaÃ±o = tamaÃ±o;
 	}
 
 	public int getStock() {
@@ -91,23 +87,6 @@ public class Productos {
 		this.stock = stock;
 	}
 
-	public TypeCategory getTypeCategory() {
-		return typeCategory;
-	}
-
-	public void setTypeCategory(TypeCategory typeCategory) {
-		this.typeCategory = typeCategory;
-	}
-
-	public TypeClothe getTypeClothe() {
-		return typeClothe;
-	}
-
-	public void setTypeClothe(TypeClothe typeClothe) {
-		this.typeClothe = typeClothe;
-	}
-	
-	
 
 	
 	

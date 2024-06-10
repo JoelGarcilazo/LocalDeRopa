@@ -31,6 +31,13 @@ public class AgregarCarritoController extends HttpServlet {
 	
 	switch (req.getParameter("accion")) {
 	case "agregar":
+		
+		try {
+			carritoService.agregarProducto();
+		} catch ( Exception e) {
+	
+		}
+		
 		try {
 			req.setAttribute("carrito", carritoService.listarCarrito() );
 			
@@ -38,12 +45,12 @@ public class AgregarCarritoController extends HttpServlet {
 			e.printStackTrace();
 		}
 		
-		
 		break;
 
 	default:
 		break;
 	}
+	
 	
 		
 		/*try {

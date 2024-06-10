@@ -46,7 +46,7 @@
 	<td><%=productos.get(i).getTamaño()%></td>
 	<td><%=productos.get(i).getStock()%></td>
 	<td> 
-		<a class="btn btn-primary"  href="<%=request.getContextPath()%>/carrito?accion=agregar$id<%=productos.get(i).getIdProducto()%>" > comprar </a>
+		<a class="btn btn-primary"  href="<%=request.getContextPath()%>/carrito?accion=agregar$idProducto<%=productos.get(i).getIdProducto()%>" > comprar </a>
 	 	<button class="btn btn-danger"> eliminar </button>
 	 </td>
 <%		

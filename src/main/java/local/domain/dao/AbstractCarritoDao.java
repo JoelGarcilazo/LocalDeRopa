@@ -6,6 +6,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import local.domain.Carrito;
 import local.domain.Productos;
 import local.domain.config.Connec;
 import local.domain.exceptions.ErrorException;
@@ -15,17 +16,20 @@ public abstract class AbstractCarritoDao<T>  {
 	private Connec connec = Connec.getInstance();
 	
 	
-	public void agregarCarrito(Productos productos) throws Exception {
+	public Carrito agregarCarrito() throws Exception {
 		 ResultSet rs = null;
 		 PreparedStatement st = null;
+		 Productos productos = new Productos();		 
+		 Carrito carrito = new Carrito();
 		 
-		try {
+		 try {
 			st = connec.dameConnection().prepareStatement(getQueryAgregar());
-			st.setInt(1,productos.getIdProducto());
+			
 			rs = st.executeQuery();
-			while(rs.next()) {
+			while(rs.next()){
 				productos.setIdProducto(rs.getInt(1));
 			}
+				
 		} catch (Exception e) {
 			throw new ErrorException("Hubo un error al realizar la consulta", e);
 		}finally {
@@ -36,7 +40,8 @@ public abstract class AbstractCarritoDao<T>  {
 				e.printStackTrace();
 			}	
 		} 
-	}
+		return carrito;
+	} 
 	
 	public List<T> listaCarrito() throws Exception {
 		 ResultSet rs = null;

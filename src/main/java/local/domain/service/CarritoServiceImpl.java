@@ -17,8 +17,8 @@ public class CarritoServiceImpl implements CarritoService {
 	}
 
 	@Override
-	public void agregarProducto() throws Exception {
-		  carritoDao.agregarCarrito(null);
+	public Carrito agregarProducto() throws Exception {
+		  return carritoDao.agregarCarrito();
 	}
 
 }

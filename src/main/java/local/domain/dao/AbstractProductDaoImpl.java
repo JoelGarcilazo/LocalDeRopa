@@ -21,7 +21,7 @@ public class AbstractProductDaoImpl extends AbstractProductDao<Productos> {
 		productos.setFoto(rs.getBinaryStream(3));
 		productos.setDescripcion(rs.getString(4));
 		productos.setPrecio(rs.getInt(5));
-		productos.setTamaño(rs.getString(6));
+		productos.setTamaÃ±o(rs.getString(6));
 		productos.setStock(rs.getInt(7));
 		return productos;
 	}
