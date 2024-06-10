@@ -59,6 +59,8 @@
               <th>Categoria</th>
               <th>Stock</th>
               <th>Precio</th>
+              <th>Modificar</th>
+              <th>Eliminar</th>
             </tr>
           </thead>
           <tbody>
@@ -69,6 +71,8 @@
               <td>Due</td>
               <td>50</td>
               <td>4563</td>
+              <td href="" style="color: blue">Editar</td>
+              <td href="" style="color: red">Eliminar</td>
             </tr>
           </tbody>
         </table>
