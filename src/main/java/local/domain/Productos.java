@@ -10,7 +10,7 @@ public class Productos {
 	private InputStream foto;
 	private String descripcion;
 	private int precio;
-	private String tamaño;
+
 	private int stock;
 
 	
@@ -18,15 +18,14 @@ public class Productos {
 		
 	}
 
-	public Productos(int idProducto, String nombre, InputStream foto, String descripcion, int precio, String tamaño,
-			int stock) {
+	public Productos(int idProducto, String nombre, InputStream foto, String descripcion, int precio, int stock) {
 		super();
 		this.idProducto = idProducto;
 		this.nombre = nombre;
 		this.foto = foto;
 		this.descripcion = descripcion;
 		this.precio = precio;
-		this.tamaño = tamaño;
+	
 		this.stock = stock;
 
 	}
@@ -69,14 +68,6 @@ public class Productos {
 
 	public void setPrecio(int precio) {
 		this.precio = precio;
-	}
-
-	public String getTamaño() {
-		return tamaño;
-	}
-
-	public void setTamaño(String tamaño) {
-		this.tamaño = tamaño;
 	}
 
 	public int getStock() {

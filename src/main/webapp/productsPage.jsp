@@ -28,7 +28,6 @@
       <th scope="col">foto</th>
       <th scope="col">descripcion</th>
       <th scope="col">precio</th>
-      <th scope="col">tamaño</th>
       <th scope="col">stock</th>
         <th scope="col">operaciones</th>
     </tr>
@@ -43,11 +42,9 @@
 	<td><%=productos.get(i).getFoto()%></td>
 	<td><%=productos.get(i).getDescripcion()%></td>
 	<td><%=productos.get(i).getPrecio()%></td>
-	<td><%=productos.get(i).getTamaño()%></td>
 	<td><%=productos.get(i).getStock()%></td>
 	<td> 
-		<a class="btn btn-primary"  href="<%=request.getContextPath()%>/carrito?accion=agregar$idProducto<%=productos.get(i).getIdProducto()%>" > comprar </a>
-	 	<button class="btn btn-danger"> eliminar </button>
+		<a class="btn btn-primary"  href="<%=request.getContextPath()%>/carrito?accion=agregar$idProducto<%=productos.get(i).getIdProducto()%>" > Agregar a Carrito </a>
 	 </td>
 <%		
 }

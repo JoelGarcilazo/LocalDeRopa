@@ -1,3 +1,11 @@
+<%@page import="org.apache.jasper.tagplugins.jstl.core.Import"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+  <%@page import="local.domain.cotroller.LoginController"%>
+  <%@page import="local.domain.Login"%>
+  <%@page import="local.domain.dao.AbstractLoginDaoImpl"%>
+  <%@page import="java.util.*"%>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +13,6 @@
   <meta charset="UTF-8" />
   <title>Login</title>
   <link rel="stylesheet" href="style.css" />
-  <script src="../custom-scripts.js" defer></script>
 </head>
 
 <body>
@@ -15,17 +22,17 @@
       <form action="#">
         <input type="text" id="nombreUsuario" placeholder="Usuario" required />
         <input type="text" id="email" placeholder="Email" required />
-        <input type="password" id="clave" placeholder="Contraseña" required />
+        <input type="password" id="clave" placeholder="ContraseÃ±a" required />
         <input type="submit" value="Registrar" />
       </form>
     </div>
 
     <div class="form login">
       <header>Iniciar Sesion</header>
-      <form action="#">
-        <input type="text" id="email" placeholder="Email" required />
-        <input type="password" id="clave" placeholder="Contraseña" required />
-        <a href="#">Olvido su contraseña?</a>
+      <form action="post" action="/slogin">
+        <input type="text" name="usuar" id="usuar" placeholder="Email" required />
+        <input type="password" name="password" id="password" placeholder="ContraseÃ±a" required />
+        <a href="#">Olvido su contraseÃ±a?</a>
         <input type="submit" value="Iniciar Sesion" />
       </form>
     </div>
