@@ -29,8 +29,8 @@
 
     <div class="form login">
       <header>Iniciar Sesion</header>
-      <form action="post" action="/slogin">
-        <input type="text" name="usuar" id="usuar" placeholder="Email" required />
+      <form method="post" action="/slogin">
+        <input type="text" name="usuar" id="usuar" placeholder="usuario" required />
         <input type="password" name="password" id="password" placeholder="ContraseÃ±a" required />
         <a href="#">Olvido su contraseÃ±a?</a>
         <input type="submit" value="Iniciar Sesion" />
