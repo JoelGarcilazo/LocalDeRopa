@@ -22,7 +22,7 @@
         <div class="icons">
             <a href="#" class="fas fa-heart"></a>
             <a href="#" class="fas fa-shopping-cart"></a>
-            <a href="#" class="fas fa-user"></a>
+            <a href="adminDashboard/formLog/login.jsp" class="fas fa-user"></a>
         </div>
     </header>
     <section class="products" id="crop_top">

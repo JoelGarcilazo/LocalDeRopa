@@ -53,11 +53,10 @@
         <div class="form signup">
           <header style="color: #986842;">Registro</header>
           <form action="#">
-            <input type="file" placeholder="File" required />
+            <input type="file" placeholder="Foto" required />
             <input type="number" placeholder="ID" required />
             <input type="text" placeholder="Nombre" required />
             <input type="text" placeholder="Descripcion" required />
-            <input type="text" placeholder="Categoria" required />
             <input type="number" placeholder="Stock" required />
             <input type="number" placeholder="Precio" required />
             <input type="submit" value="Registrar" />

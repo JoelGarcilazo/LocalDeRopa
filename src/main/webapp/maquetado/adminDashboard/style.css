@@ -749,9 +749,11 @@ form .checkbox {
 }
 
 .wrapper {
-  height: 45rem;
+  justify-content: center;
+  margin-top: 8%;
+  height: 40rem;
   position: relative;
-  width: 100%;
+  width: 80%;
   border-radius: 75px;
   padding: 20px 30px 120px;
   background: #efe7da;
@@ -760,15 +762,17 @@ form .checkbox {
 }
 
 form input[type="text"] {
-  position: relative;
-  float: left;
-  width: 50%;
+  width: 100%;
   cursor: pointer;
 }
 form input[type="number"] {
-  position: relative;
-  float: right;
-  width: 50%;
+  width: 100%;
+  cursor: pointer;
+}
+
+form input[type="file"] {
+
+  width: 100%;
   cursor: pointer;
 }
 
