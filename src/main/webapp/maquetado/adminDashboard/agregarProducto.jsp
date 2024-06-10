@@ -25,11 +25,11 @@
 
       <div class="sidebar">
 
-        <a href="productos.html" >
+        <a href="productos.jsp" >
           <span class="material-symbols-sharp">grid_view </span>
           <h3>Productos</h3>
         </a>
-        <a href="pedidos.html" >
+        <a href="pedidos.jsp" >
           <span class="material-symbols-sharp">receipt_long </span>
           <h3>Pedidos</h3>
         </a>

@@ -28,11 +28,11 @@
           <span class="material-symbols-sharp">grid_view </span>
           <h3>Productos</h3>
         </a>
-        <a href="pedidos.html">
+        <a href="pedidos.jsp">
           <span class="material-symbols-sharp">receipt_long </span>
           <h3>Pedidos</h3>
         </a>
-        <a href="agregarProducto.html">
+        <a href="agregarProducto.jsp">
           <span class="material-symbols-sharp">add </span>
           <h3>Añadir Producto</h3>
         </a>

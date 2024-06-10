@@ -16,7 +16,7 @@
         <a href="#" class="logo">flower<span>.</span></a>
 
         <nav class="navbar">
-            <a href="index.html">Inicio</a>
+            <a href="index.jsp">Inicio</a>
         </nav>
 
         <div class="icons">

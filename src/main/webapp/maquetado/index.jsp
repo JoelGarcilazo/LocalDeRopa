@@ -98,7 +98,7 @@
                     <img src="img/HOODIE-SUPER-SOFT-RUSTICO-22-03-BLANCO.webp" alt="">
                 </div>
                 <div class="content">
-                    <h3><a href="hoodie.html" style="color: black;">hoodies</a></h3>
+                    <h3><a href="hoodie.jsp" style="color: black;">hoodies</a></h3>
                 </div>
             </div>
 
@@ -107,7 +107,7 @@
                     <img src="img/CROP-SLEEVELESS-22-17-BLANCO.webp" alt="">
                 </div>
                 <div class="content">
-                    <h3><a href="cropTop.html" style="color: black;">crop sleeveless</a></h3>
+                    <h3><a href="cropTop.jsp" style="color: black;">crop sleeveless</a></h3>
                 </div>
             </div>
 
@@ -116,7 +116,7 @@
                     <img src="img/REMERA-OVERSIZE-CROP-22-25-BLANCO.webp" alt="">
                 </div>
                 <div class="content">
-                    <h3><a href="remera.html" style="color: black;">remeras</a></h3>
+                    <h3><a href="remera.jsp" style="color: black;">remeras</a></h3>
                 </div>
             </div>
         </div>
