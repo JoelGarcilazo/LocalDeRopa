@@ -34,39 +34,34 @@ public class LoginController extends HttpServlet  {
 		}
 		
 		protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-			
 			HttpSession sesion = req.getSession();
-		
 			String usuario = req.getParameter("usuar");
 			String clave = req.getParameter("password");
 			Login user = new Login();
-			Login log = new Login();
 
 			user.setUsuario(usuario);
 			user.setClave(clave);
 			try {
-				//verifica existe usuario
+				//verificar existencia de usuario
 				loginService.logueo(user);
-				
-				//verifica usuario y password
-				
+				//verificar password
+				loginService.verificarPassword(user);
 				//obtner rol
-				
+				loginService.verificarRol(user);
 				
 			} catch (Exception e) {
 				resp.sendRedirect("/error.jsp");
 			}
 			
-			
-			if  (log.getRol().equalsIgnoreCase("a")) {
+			if  (user.getRol().equalsIgnoreCase("a")) {
 				resp.sendRedirect("/administrador.jsp");
 			}
 			
-			if (log.getRol().equalsIgnoreCase("u")) {
+			if (user.getRol().equalsIgnoreCase("u")) {
 				resp.sendRedirect("/ProductosPage.jsp");
 			}
-				sesion.setAttribute("sUsuario", log.getUsuario());
-				sesion.setAttribute("sRol", log.getRol());
+				sesion.setAttribute("sUsuario", user.getUsuario());
+				sesion.setAttribute("sRol", user.getRol());
 					
 		}
 
