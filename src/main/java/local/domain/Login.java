@@ -11,9 +11,17 @@ private int idLogin;
 	private String rol;
 
 	
+	public Login(String usuario, String password) {
+		this.usuario = usuario;
+		this.clave = password;
+	}
+	
+	
+	
 	public Login() {
 		
 	}
+	
 	
 	
 	public Login(int idLogin, String usuario, String clave, String rol) {

@@ -4,6 +4,6 @@ import local.domain.Login;
 
 public interface LoginService {
 
-	public Login logueo(Login user) throws Exception;
+	public void logueo(Login user) throws Exception;
 	
 }

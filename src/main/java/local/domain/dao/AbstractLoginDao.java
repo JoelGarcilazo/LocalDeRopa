@@ -7,11 +7,12 @@ import java.sql.SQLException;
 import local.domain.Login;
 import local.domain.config.Connec;
 
+
 public abstract class  AbstractLoginDao {
 	
 	private Connec connec = Connec.getInstance();
 	
-	public Login logueo(Login user) throws Exception{
+	public void logueo(Login user) throws Exception{
 			ResultSet rs = null;
 			PreparedStatement st = null;
 			try {
@@ -19,14 +20,14 @@ public abstract class  AbstractLoginDao {
 				st.setString(1, user.getUsuario());
 				rs = st.executeQuery();
 				if (!rs.first()) {
-					throw new Exception();
-				}
+					throw new Exception("No existe el usuario ingresado");	
+				}	
 			} catch (SQLException e) {
-		
+				System.out.println("");
 			}finally {
 				finalizar(st, rs);
 		}
-			return user;
+	
 	}
 	
 	protected abstract String getQueryLogin();

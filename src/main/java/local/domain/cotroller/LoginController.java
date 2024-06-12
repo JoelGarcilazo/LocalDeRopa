@@ -45,21 +45,25 @@ public class LoginController extends HttpServlet  {
 			user.setUsuario(usuario);
 			user.setClave(clave);
 			try {
-				log = loginService.logueo(user);
-			} catch (Exception e) {
+				//verifica existe usuario
+				loginService.logueo(user);
 				
-			}
-			
-			
-			if (log.getUsuario() != usuario) {
+				//verifica usuario y password
+				
+				//obtner rol
+				
+				
+			} catch (Exception e) {
 				resp.sendRedirect("/error.jsp");
-			}	
-							
-				if  (log.getRol().equalsIgnoreCase("a")) {
-						resp.sendRedirect("/administrador.jsp");
 			}
-				if (log.getRol().equalsIgnoreCase("u")) {
-						resp.sendRedirect("/ProductosPage.jsp");
+			
+			
+			if  (log.getRol().equalsIgnoreCase("a")) {
+				resp.sendRedirect("/administrador.jsp");
+			}
+			
+			if (log.getRol().equalsIgnoreCase("u")) {
+				resp.sendRedirect("/ProductosPage.jsp");
 			}
 				sesion.setAttribute("sUsuario", log.getUsuario());
 				sesion.setAttribute("sRol", log.getRol());
