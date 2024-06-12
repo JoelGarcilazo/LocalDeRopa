@@ -36,7 +36,7 @@ body {
   padding: 20px 140px;
   border-radius: 50%;
   height: 100%;
-  background: #fff;
+  background: #eaeaea;
   transition: all 0.6s ease;
 }
 
@@ -80,31 +80,17 @@ form input {
   border: none;
   padding: 0 15px;
   font-size: 16px;
-  font-weight: 400;
   color: #333;
   border-radius: 28px;
   background: #fff;
 }
 
 .form.login input {
-  border: 1px solid #aaa;
+  border: 1px solid #aaaaaa00;
 }
 
 .form.login input:focus {
   box-shadow: 0 1px 0 #ddd;
-}
-
-form .checkbox {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.checkbox input[type="checkbox"] {
-  height: 16px;
-  width: 16px;
-  accent-color: #fff;
-  cursor: pointer;
 }
 
 form .checkbox label {
@@ -115,10 +101,6 @@ form .checkbox label {
 form a {
   color: #333;
   text-decoration: none;
-}
-
-form a:hover {
-  text-decoration: underline;
 }
 
 form input[type="submit"] {
