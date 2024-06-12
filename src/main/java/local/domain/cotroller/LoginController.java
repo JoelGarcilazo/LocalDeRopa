@@ -38,6 +38,7 @@ public class LoginController extends HttpServlet  {
 			String usuario = req.getParameter("usuar");
 			String clave = req.getParameter("password");
 			Login user = new Login();
+			
 
 			user.setUsuario(usuario);
 			user.setClave(clave);
@@ -46,20 +47,14 @@ public class LoginController extends HttpServlet  {
 				loginService.logueo(user);
 				//verificar password
 				loginService.verificarPassword(user);
-				//obtner rol
+				//verificar rol
 				loginService.verificarRol(user);
 				
 			} catch (Exception e) {
 				resp.sendRedirect("/error.jsp");
 			}
-			
-			if  (user.getRol().equalsIgnoreCase("a")) {
-				resp.sendRedirect("/administrador.jsp");
-			}
-			
-			if (user.getRol().equalsIgnoreCase("u")) {
 				resp.sendRedirect("/ProductosPage.jsp");
-			}
+				
 				sesion.setAttribute("sUsuario", user.getUsuario());
 				sesion.setAttribute("sRol", user.getRol());
 					

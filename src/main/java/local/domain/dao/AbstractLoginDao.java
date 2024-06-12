@@ -59,7 +59,7 @@ public abstract class  AbstractLoginDao {
 			rs = st.executeQuery();
 			if (!rs.first()) {
 				throw new Exception("No existe el rol ingresado");	
-			}	
+			}
 		} catch (SQLException e) {
 			System.out.println("");
 		}finally {

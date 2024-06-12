@@ -1,5 +1,5 @@
 <%@page import="org.apache.jasper.tagplugins.jstl.core.Import"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@page import="local.domain.cotroller.LoginController"%>
 <%@page import="local.domain.Login"%>
 <%@page import="local.domain.dao.AbstractLoginDaoImpl"%>
