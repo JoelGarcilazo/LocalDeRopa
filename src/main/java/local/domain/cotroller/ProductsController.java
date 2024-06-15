@@ -14,8 +14,6 @@ import local.domain.service.CarritoServiceImpl;
 import local.domain.service.ProductsService;
 import local.domain.service.ProductsServiceImp;
 
-
-
 @WebServlet( urlPatterns =  "/productos")
 public class ProductsController extends HttpServlet{
 	
@@ -27,7 +25,7 @@ public class ProductsController extends HttpServlet{
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 	
-		RequestDispatcher ds = this.getServletContext().getRequestDispatcher("/productsPage.jsp");
+		RequestDispatcher ds = this.getServletContext().getRequestDispatcher("/maquetado/adminDashboard/productos.jsp");
 		
 		try {
 			req.setAttribute("productos", productsService.listarProductos());

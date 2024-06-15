@@ -18,8 +18,6 @@ public abstract class AbstractProductDao<T> {
 	
 	private Connec connec = Connec.getInstance();
 	
-	
-	
 	public List<T> toList() throws Exception {
 		 ResultSet rs = null;
 		 List<T> list = null;

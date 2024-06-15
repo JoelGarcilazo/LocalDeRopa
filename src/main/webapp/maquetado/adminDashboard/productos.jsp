@@ -1,3 +1,9 @@
+<%@page import="org.apache.jasper.tagplugins.jstl.core.Import"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+    
+<%@page import="java.util.*"%>
+<%@page import="local.domain.Productos"%>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,7 +14,7 @@
   <title>Productos</title>
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,0,0" />
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="<%=request.getContextPath()%>/maquetado/adminDashboard/style.css">
 </head>
 
 <body>
@@ -24,17 +30,17 @@
       </div>
 
       <div class="sidebar">
-        <a href="#" class="active">
+        <a href="<%=request.getContextPath()%>/productos" class="active">
           <span class="material-symbols-sharp">grid_view </span>
           <h3>Productos</h3>
         </a>
-        <a href="pedidos.jsp">
+        <a href="<%=request.getContextPath()%>/pedidos">
           <span class="material-symbols-sharp">receipt_long </span>
           <h3>Pedidos</h3>
         </a>
-        <a href="agregarProducto.jsp">
+        <a href="<%=request.getContextPath()%>/agregarProducto">
           <span class="material-symbols-sharp">add </span>
-          <h3>Añadir Producto</h3>
+          <h3>Agregar Producto</h3>
         </a>
         <a href="#">
           <span class="material-symbols-sharp">logout </span>
@@ -49,31 +55,36 @@
       <h1>Flower.</h1>
 
       <div class="recent_order">
+      
+      <% List<Productos> productos  =  (List) request.getAttribute("productos");%>
+      
         <h2>Productos</h2>
         <table>
           <thead>
             <tr>
               <th>ID</th>
               <th>Nombre</th>
+              <th>Imagen</th>
               <th>Descripcion</th>
-              <th>Categoria</th>
-              <th>Stock</th>
               <th>Precio</th>
+              <th>Stock</th>
               <th>Modificar</th>
               <th>Eliminar</th>
             </tr>
           </thead>
           <tbody>
+          <% for(int i=0;i<productos.size();i++){ %>
             <tr>
-              <td>1</td>
-              <td>Mini USB</td>
-              <td>Mini USB</td>
-              <td>Due</td>
-              <td>50</td>
-              <td>4563</td>
+              <td><%=productos.get(i).getIdProducto() %></td>
+	            <td><%=productos.get(i).getNombre()%></td>
+	            <td><%=productos.get(i).getFoto()%></td>
+	            <td><%=productos.get(i).getDescripcion()%></td>
+	            <td><%=productos.get(i).getPrecio()%></td>
+	            <td><%=productos.get(i).getStock()%></td>
               <td href="" style="color: blue">Editar</td>
-              <td href="" style="color: red">Eliminar</td>
+              <td href="" style="color: red">Eliminar</td>            
             </tr>
+          <% } %>
           </tbody>
         </table>
       </div>
@@ -95,14 +106,11 @@
             <p>Admin</p>
             <small class="text-muted"></small>
           </div>
-          <div class="profile-photo">
-            <img src="images/profile-3.jpg" alt="" />
-          </div>
         </div>
       </div>
     </div>
   </div>
 
-  <script src="script.js"></script>
+  <script src="<%=request.getContextPath()%>/maquetado/adminDashboard/script.js"></script>
 </body>
 </html>

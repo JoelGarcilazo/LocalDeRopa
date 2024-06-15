@@ -25,7 +25,6 @@ public class Productos {
 		this.foto = foto;
 		this.descripcion = descripcion;
 		this.precio = precio;
-	
 		this.stock = stock;
 
 	}

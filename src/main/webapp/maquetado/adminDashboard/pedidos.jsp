@@ -8,7 +8,7 @@
   <title>Pedidos</title>
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,0,0" />
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="<%=request.getContextPath()%>/maquetado/adminDashboard/style.css">
 </head>
 
 <body>
@@ -25,17 +25,17 @@
 
       <div class="sidebar">
 
-        <a href="productos.jsp" >
+        <a href="<%=request.getContextPath()%>/productos" >
           <span class="material-symbols-sharp">grid_view </span>
           <h3>Productos</h3>
         </a>
-        <a href="#" class="active">
+        <a href="<%=request.getContextPath()%>/pedidos" class="active">
           <span class="material-symbols-sharp">receipt_long </span>
           <h3>Pedidos</h3>
         </a>
-        <a href="agregarProducto.jsp">
+        <a href="<%=request.getContextPath()%>/agregarProducto">
           <span class="material-symbols-sharp">add </span>
-          <h3>Añadir Producto</h3>
+          <h3>Agregar Producto</h3>
         </a>
         <a href="#">
           <span class="material-symbols-sharp">logout </span>
@@ -88,9 +88,6 @@
             <p><b>Aylen</b></p>
             <p>Admin</p>
             <small class="text-muted"></small>
-          </div>
-          <div class="profile-photo">
-            <img src="images/profile-3.jpg" alt="" />
           </div>
         </div>
       </div>

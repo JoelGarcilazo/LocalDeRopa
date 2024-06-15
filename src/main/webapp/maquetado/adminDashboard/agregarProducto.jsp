@@ -8,7 +8,7 @@
   <title>Pedidos</title>
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,0,0" />
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="<%=request.getContextPath()%>/maquetado/adminDashboard/style.css">
 </head>
 
 <body>
@@ -25,17 +25,17 @@
 
       <div class="sidebar">
 
-        <a href="productos.jsp" >
+        <a href="<%=request.getContextPath()%>/productos" >
           <span class="material-symbols-sharp">grid_view </span>
           <h3>Productos</h3>
         </a>
-        <a href="pedidos.jsp" >
+        <a href="<%=request.getContextPath()%>/pedidos" >
           <span class="material-symbols-sharp">receipt_long </span>
           <h3>Pedidos</h3>
         </a>
-        <a href="#" class="active">
+        <a href="<%=request.getContextPath()%>/agregarProducto" class="active">
           <span class="material-symbols-sharp">add </span>
-          <h3>Añadir Producto</h3>
+          <h3>Agregar Producto</h3>
         </a>
         <a href="formLog/login.html">
           <span class="material-symbols-sharp">logout </span>
@@ -51,15 +51,14 @@
 
       <section class="wrapper">
         <div class="form signup">
-          <header style="color: #986842;">Registro</header>
+          <header style="color: #986842;">Agregar Producto</header>
           <form action="#">
-            <input type="file" placeholder="Foto" required />
             <input type="number" placeholder="ID" required />
             <input type="text" placeholder="Nombre" required />
             <input type="text" placeholder="Descripcion" required />
             <input type="number" placeholder="Stock" required />
             <input type="number" placeholder="Precio" required />
-            <input type="submit" value="Registrar" />
+            <input type="submit" value="Agregar" />
           </form>
         </div>
       </section>
