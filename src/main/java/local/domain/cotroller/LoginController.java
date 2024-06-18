@@ -47,12 +47,19 @@ public class LoginController extends HttpServlet  {
 				loginService.logueo(user);
 				//verificar password
 				loginService.verificarPassword(user);
+				//verificar rol
+				loginService.verificarRol(user);
 				
 			} catch (Exception e) {
 				resp.sendRedirect("/error.jsp");
 			}
 			
-			resp.sendRedirect("/home");
+			if(user.getRol().equals("admin")) {
+				resp.sendRedirect("/productos");
+			}
+			else {
+				resp.sendRedirect("/home");
+			}
 			
 				sesion.setAttribute("sUsuario", user.getUsuario());
 				sesion.setAttribute("sRol", user.getRol());

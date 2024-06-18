@@ -2,7 +2,7 @@ package local.domain;
 
 public class Login {
 
-private int idLogin;
+    private int idLogin;
 	
 	private String usuario;
 	
@@ -11,9 +11,10 @@ private int idLogin;
 	private String rol;
 
 	
-	public Login(String usuario, String password) {
+	public Login(String usuario, String password, String rol) {
 		this.usuario = usuario;
 		this.clave = password;
+		this.rol = rol;
 	}
 	
 	
