@@ -10,7 +10,6 @@ public class Productos {
 	private InputStream foto;
 	private String descripcion;
 	private int precio;
-
 	private int stock;
 
 	

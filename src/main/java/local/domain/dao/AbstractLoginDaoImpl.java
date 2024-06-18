@@ -4,17 +4,13 @@ public class AbstractLoginDaoImpl extends AbstractLoginDao {
 
 	@Override
 	protected String getQueryLogin() {
-		return "SELECT id_usuario, usuario, clave, rol FROM login WHERE usuario = ?";
+		return "SELECT id_usuario, nombre_usuario, email, clave FROM usuario WHERE nombre_usuario = ?";
 	}
 
 	@Override
 	protected String getQueryPassword() {
-		return "SELECT usuario, clave FROM login WHERE usuario = ? AND clave = ?";
+		return "SELECT nombre_usuario, clave FROM usuario WHERE nombre_usuario = ? AND clave = ?";
 	}
 
-	@Override
-	protected String getQueryRol() {
-		return "SELECT usuario, rol FROM login WHERE usuario = ?";
-	}
 
 }

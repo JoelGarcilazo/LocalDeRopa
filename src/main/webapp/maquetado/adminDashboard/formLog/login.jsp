@@ -39,7 +39,7 @@
       <form method="post" action="/slogin">
         <input type="text" name="usuar" id="usuar" placeholder="Usuario" required />
         <div class="input_container">
-          <input type="password" id="txtPassword2" class="control" placeholder="Contraseña" required>
+          <input type="password" name = "password" id="txtPassword2" class="control" placeholder="Contraseña" required>
           <span id="imgContrasena2" data-activo=false><img src="https://cdn3.iconfinder.com/data/icons/show-and-hide-password/100/show_hide_password-09-256.png" class="icon"></span>
         </div>
         <input type="submit" value="Iniciar Sesion" />

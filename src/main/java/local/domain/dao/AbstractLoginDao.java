@@ -49,29 +49,9 @@ public abstract class  AbstractLoginDao {
 		}
 	}
 	
-	public void verificarRol(Login user) throws Exception {
-		ResultSet rs = null;
-		PreparedStatement st = null;
-		
-		try {
-			st = connec.dameConnection().prepareStatement(getQueryRol());
-			st.setString(1, user.getUsuario());
-			rs = st.executeQuery();
-			if (!rs.first()) {
-				throw new Exception("No existe el rol ingresado");	
-			}
-		} catch (SQLException e) {
-			System.out.println("");
-		}finally {
-			finalizar(st, rs);
-		}
-	}
-	
 	protected abstract String getQueryLogin();
 	
 	protected abstract String getQueryPassword(); 
-	
-	protected abstract String getQueryRol();
 	
 	public void finalizar(PreparedStatement st, ResultSet rs) throws Exception{
 		

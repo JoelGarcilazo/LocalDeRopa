@@ -22,13 +22,5 @@ public class LoginServiceImpl implements LoginService {
 		}
 		
 	}
-	@Override
-	public void verificarRol(Login user) throws Exception {
-		try {
-			loginDao.verificarRol(user);
-		} catch (Exception e) {
-		}
-		
-	}
 
 }
