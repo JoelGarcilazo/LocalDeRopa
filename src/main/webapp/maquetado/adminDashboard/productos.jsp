@@ -5,6 +5,17 @@
 <%@page import="local.domain.Productos"%>
 
 <!DOCTYPE html>
+
+
+<%	String usuario = (String) request.getSession().getAttribute("sUsuario");
+
+	String nivel = (String) request.getSession().getAttribute("sRol");
+	
+	if(usuario==null){
+		response.sendRedirect("/login");
+	}
+
+%>
 <html lang="en">
 
 <head>
@@ -42,7 +53,7 @@
           <span class="material-symbols-sharp">add </span>
           <h3>Agregar Producto</h3>
         </a>
-        <a href="#">
+        <a href="slogin?conf=0">
           <span class="material-symbols-sharp">logout </span>
           <h3>Cerrar Sesion</h3>
         </a>
