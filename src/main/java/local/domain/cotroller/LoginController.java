@@ -28,7 +28,7 @@ public class LoginController extends HttpServlet  {
 				sesion.removeAttribute("sUsuario");
 				sesion.removeAttribute("sRol");
 				sesion.invalidate();
-				resp.sendRedirect("login.jsp");	
+				resp.sendRedirect("/login");	
 			
 			}
 		}
