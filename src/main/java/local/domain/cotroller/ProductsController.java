@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import local.domain.service.AdminService;
+import local.domain.service.AdminServiceImpl;
 import local.domain.service.ProductsService;
 import local.domain.service.ProductsServiceImp;
 
@@ -16,7 +18,7 @@ import local.domain.service.ProductsServiceImp;
 public class ProductsController extends HttpServlet{
 	
 	private static final long serialVersionUID = 1L;
-	private ProductsService productsService = new ProductsServiceImp();
+	private AdminService adminService = new AdminServiceImpl();
 	
 
 	@Override
@@ -25,7 +27,7 @@ public class ProductsController extends HttpServlet{
 		RequestDispatcher ds = this.getServletContext().getRequestDispatcher("/maquetado/adminDashboard/productos.jsp");
 		
 		try {
-			req.setAttribute("productos", productsService.listarProductos());
+			req.setAttribute("productos", adminService.listarProductos());
 			
 		} catch (Exception e) {
 			e.printStackTrace();
