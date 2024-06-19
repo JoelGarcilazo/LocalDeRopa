@@ -12,7 +12,7 @@
 	String nivel = (String) request.getSession().getAttribute("sRol");
 	
 	if(usuario==null){
-		response.sendRedirect("/login");
+		response.sendRedirect("/login2");
 	}
 
 %>

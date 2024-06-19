@@ -11,22 +11,18 @@ public class AbstractAdminDaoImpl extends AbstractAdminDao<Productos>{
 	protected String getQueryList() {
 		return "SELECT * FROM producto";
 	}
-
 	@Override
 	protected String getQueryDelete() {
 		return "DELETE FROM producto WHERE id_producto = ?";
 	}
-
 	@Override
 	protected String getQueryModify() {
 		return "UPDATE Producto SET nombre = ?, foto = ?, descripcion = ?, precio = ?, stock = ? WHERE id_producto = ?";
 	}
-
 	@Override
 	protected String getQueryAdd() {
 		return "INSERT INTO producto (nombre, foto, descripcion, precio, stock) VALUES (?,?,?,?,?)";
 	}
-
 	@Override
 	protected Productos getPojo(ResultSet rs) throws Exception {
 		Productos productos = new Productos();

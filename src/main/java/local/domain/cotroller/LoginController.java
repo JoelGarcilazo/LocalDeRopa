@@ -49,11 +49,10 @@ public class LoginController extends HttpServlet  {
 				loginService.verificarPassword(user);
 				//verificar rol
 				loginService.verificarRol(user);
-				
-			} catch (Exception e) {
-				resp.sendRedirect("/error.jsp");
-			}
 			
+			} catch (Exception e) {
+				resp.sendRedirect("/AppExceptionHandler");
+			}
 			if(user.getRol().equals("admin")) {
 				resp.sendRedirect("/productos");
 			}

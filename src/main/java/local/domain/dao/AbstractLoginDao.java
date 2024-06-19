@@ -6,6 +6,7 @@ import java.sql.SQLException;
 
 import local.domain.Login;
 import local.domain.config.Connec;
+import local.domain.exceptions.ErrorException;
 
 
 public abstract class  AbstractLoginDao {
@@ -40,7 +41,7 @@ public abstract class  AbstractLoginDao {
 			st.setString(2, user.getClave());
 			rs = st.executeQuery();
 			if (!rs.first()) {
-				throw new Exception("No existe la clave ingresada");	
+				throw new ErrorException("No existe la clave ingresada");	
 			}	
 		} catch (SQLException e) {
 			System.out.println("");
@@ -57,7 +58,7 @@ public abstract class  AbstractLoginDao {
 			st = connec.dameConnection().prepareStatement(getQueryRol());
 			st.setString(1, user.getUsuario());
 			rs = st.executeQuery();
-			if (rs.next()) {
+			if (rs.first()) {
 				user.setUsuario(rs.getString(1));
 				user.setRol(rs.getString(2));
 			}	

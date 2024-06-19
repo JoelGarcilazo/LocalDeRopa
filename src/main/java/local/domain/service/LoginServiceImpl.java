@@ -12,6 +12,7 @@ public class LoginServiceImpl implements LoginService {
 		try {
 			loginDao.logueo(user);
 		} catch (Exception e) {
+			 throw new  Exception("error");
 		}
 	}
 	@Override
@@ -19,6 +20,8 @@ public class LoginServiceImpl implements LoginService {
 		try {
 			loginDao.verificarClave(user);
 		} catch (Exception e) {
+			System.out.println("dato erroneo");
+			 throw new Exception("error");
 		}
 		
 	}
@@ -27,6 +30,7 @@ public class LoginServiceImpl implements LoginService {
 		try {
 			loginDao.verificarRol(user);
 		} catch (Exception e) {
+			 throw new Exception("error");
 		}
 	}
 
