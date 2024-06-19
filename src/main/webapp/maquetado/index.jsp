@@ -1,4 +1,23 @@
 <!DOCTYPE html>
+
+<%@page import="org.apache.jasper.tagplugins.jstl.core.Import"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+    
+<%@page import="java.util.*"%>
+<%@page import="local.domain.Productos"%>
+
+
+<%	String usuario = (String) request.getSession().getAttribute("sUsuario");
+
+	String nivel = (String) request.getSession().getAttribute("sRol");
+	
+	if(usuario==null){
+		response.sendRedirect("/login");
+	}
+
+%>
+
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -19,8 +38,10 @@
             <a href="#home">Inicio</a>
             <a href="#about">Nosotros</a>
             <a href="#catalogo">Catalogo</a>
-            <a href="#review">Reseñas</a>
+            <a href="#review">ReseÃ±as</a>
             <a href="#contact">Contacto</a>
+            <p><a href="slogin?conf=0">Salir de la sesion</a></p>
+            
         </nav>
 
         <div class="icons">
@@ -50,7 +71,7 @@
             </div>
 
             <div class="content">
-                <h3>Por qué elegirnos?</h3>
+                <h3>Por quÃ© elegirnos?</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             </div>
@@ -69,7 +90,7 @@
             <img src="img/icon-2.png" alt="">
             <div class="info">
                 <h3>10 dias de devolucion</h3>
-                <span>Garantía de devolución del dinero</span>
+                <span>GarantÃ­a de devoluciÃ³n del dinero</span>
             </div>
         </div>
         <div class="icons">
@@ -123,7 +144,7 @@
     </section>
 
     <section class="review" id="review">
-        <h1 class="heading"> reseñas de <span>clientes</span></h1>
+        <h1 class="heading"> reseÃ±as de <span>clientes</span></h1>
 
         <div class="box-container">
 
@@ -195,7 +216,7 @@
             <form action="">
                 <input type="text" placeholder="nombre" class="box">
                 <input type="email" placeholder="email" class="box">
-                <input type="number" placeholder="número" class="box">
+                <input type="number" placeholder="nÃºmero" class="box">
                 <textarea name="" class="box" placeholder="mensaje" id="" cols="30" rows="10"></textarea>
                 <input type="submit" value="enviar mensaje" class="btn">
             </form>
@@ -205,7 +226,7 @@
     <section class="footer">
         <div class="box-container">
             <div class="box">
-                <h3>links rápidos</h3>
+                <h3>links rÃ¡pidos</h3>
                 <a href="#">inicio</a>
                 <a href="#">nosotros</a>
                 <a href="#">productos</a>
@@ -229,7 +250,7 @@
             </div>
 
             <div class="box">
-                <h3>información de contacto</h3>
+                <h3>informaciÃ³n de contacto</h3>
                 <a href="#">+54 9 1122334455</a>
                 <a href="#">flores@gmail.com</a>
                 <a href="#">CABA, Argentina</a>
