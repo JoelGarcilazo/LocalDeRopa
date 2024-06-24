@@ -23,6 +23,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="<%=request.getContextPath()%>/maquetado/css/style.css">
 </head>
@@ -48,6 +49,9 @@
             <a href="#" class="fas fa-heart"></a>
             <a href="#" class="fas fa-shopping-cart"></a>
             <a href="adminDashboard/formLog/login.jsp" class="fas fa-user"></a>
+            <a href="slogin?conf=0"><span class="material-symbols-sharp">logout </span>
+                <h3>Cerrar Sesion</h3>
+            </a>
         </div>
     </header>
 
