@@ -12,7 +12,7 @@
 	String nivel = (String) request.getSession().getAttribute("sRol");
 	
 	if(usuario==null){
-		response.sendRedirect("/login2");
+		response.sendRedirect("/login");
 	}
 
 %>
@@ -91,8 +91,8 @@
 	            <td><%=productos.get(i).getDescripcion()%></td>
 	            <td><%=productos.get(i).getPrecio()%></td>
 	            <td><%=productos.get(i).getStock()%></td>
-              <td href="" style="color: blue">Editar</td>
-              <td href="" style="color: red">Eliminar</td>            
+              <td><a href="/delete&idProducto" class="btn btn-outline-warning" style="color: blue">Editar</a></td> 
+              <td><a href="/delete" class="btn btn-outline-danger" style="color: red">Eliminar</a></td>            
             </tr>
           <% } %>
           </tbody>
