@@ -41,7 +41,6 @@
             <a href="#catalogo">Catalogo</a>
             <a href="#review">ReseÃ±as</a>
             <a href="#contact">Contacto</a>
-            <p><a href="slogin?conf=0">Salir de la sesion</a></p>
             
         </nav>
 
